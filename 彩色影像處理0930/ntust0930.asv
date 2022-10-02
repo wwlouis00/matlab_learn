@@ -1,0 +1,8 @@
+clc,close all, clear all
+disp('Show 8-bit planes of an image')
+
+A = imresize(imresize('cameraman.tif'),0.5);
+B = double(A);
+
+subplot(3,4,1),imshow(unit8(B)) ,title('source') 
+set(gcf,'name','8 binary planes of a 8-bit garyscale image')
